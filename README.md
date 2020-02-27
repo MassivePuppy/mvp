@@ -25,6 +25,3 @@ docker-compose stop [SERVICE]
 ```
 docker-compose build [SERVICE]
 ```
-
-
-
