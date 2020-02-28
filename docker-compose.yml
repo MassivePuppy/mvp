@@ -1,6 +1,6 @@
 version: '3'
 services:
-    database:
+    mongo:
         image: 'mongo'
         container_name: 'mvp-mongo'
         environment: 
@@ -10,7 +10,13 @@ services:
             - /data/db
         ports:
             - 27017:27017  
-    web:
+    api:
         build: ../mvp-api/
+        container_name: 'mvp-api'
         ports:
             - "3000:3000"
+    web:
+        build: ../mvp-web/
+        container_name: 'mvp-web'
+        ports:
+            - "8080:8080"
